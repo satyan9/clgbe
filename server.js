@@ -6,6 +6,10 @@ const app = express();
 app.use(cors());
 app.use(express.json());
 
+app.get('/', (req, res) => {
+  res.send('Global Tech APIs are running correctly.');
+});
+
 const JWT_SECRET = 'your_super_secret_key_change_in_production';
 
 // Mock Databases (since requirement said no signup, just login)
